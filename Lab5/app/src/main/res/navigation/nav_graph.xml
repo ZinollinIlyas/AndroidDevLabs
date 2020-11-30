@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/todoListFragment">
+
+
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.example.lab5.TodoListFragment"
+        android:label="TodoListFragment" >
+        <action
+            android:id="@+id/action_todoListFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_detailedPageFragment2"
+            app:destination="@id/detailedPageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.lab5.AddTaskFragment"
+        android:label="AddTaskFragment" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedPageFragment2"
+        android:name="com.example.lab5.DetailedPageFragment"
+        android:label="DetailedPageFragment" >
+        <action
+            android:id="@+id/action_detailedPageFragment2_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
+    </fragment>
+</navigation>
